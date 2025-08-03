@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { --radius: 12px; }
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body { @apply text-gray-900 antialiased; font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
+  h1 { @apply text-4xl md:text-5xl font-semibold; }
+  h2 { @apply text-3xl md:text-4xl font-semibold; }
+  h3 { @apply text-2xl font-semibold; }
+  p  { @apply text-base leading-relaxed; }
+}
+
+@layer components {
+  .container-xl { @apply max-w-content mx-auto px-4 md:px-6; }
+  .btn { @apply inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium transition; }
+  .btn-primary { @apply bg-brand-blue text-white hover:opacity-90; }
+  .btn-ghost { @apply border border-white/20 text-white hover:bg-white/10; }
+  .card { @apply rounded-2xl bg-white shadow-soft p-6; }
+}
