@@ -1,7 +1,12 @@
 import Navbar from "./components/Navbar";     // or "./components/Navbar.jsx"
 import "./index.css";                         // your global styles
-
-
+import hero from './assets/first.png';
+import forester from './assets/forester.avif';
+import idc from './assets/idc.avif';
+import nhs from './assets/NHS-Logo.avif';
+import feature from './assets/FeatureDiv.avif';
+import microsoftLogo from './assets/microsoft.png';
+import audi from './assets/audi-logo-352315.png';
 // src/App.jsx
 
 const Container = ({ className = "", children }) => (
@@ -27,7 +32,7 @@ const TopNav = () => {
           {/* Left: Microsoft logo + brand */}
           <a href="#" className="flex items-center gap-3 shrink-0">
             <img
-              src="/microsoft.png"
+              src={microsoftLogo}
               alt="Microsoft"
               className="h-6 w-auto"
               loading="eager"
@@ -132,7 +137,7 @@ const Hero = () => (
       </div>
       <div className="relative">
         <div className="aspect-[16/9] rounded-[20px] overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,.25)] ring-1 ring-black/10">
-          <img src="/first.png" alt="Team working with dashboards" className="w-full h-full object-cover" />
+          <img src={hero} alt="Team working with dashboards" className="w-full h-full object-cover" />
         </div>
       </div>
     </div>
@@ -395,7 +400,7 @@ const RecognitionStoriesResources = () => (
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           {[
             {
-              logo: "/forester.avif",
+              logo: forester,
               alt: "Forrester",
               title: "A Leader in Unified Endpoint Management",
               copy:
@@ -403,7 +408,7 @@ const RecognitionStoriesResources = () => (
               cta: "Read the report",
             },
             {
-              logo: "/forester.avif",
+              logo: forester,
               alt: "Forrester",
               title: "The Total Economic Impact™ of Microsoft Intune",
               copy:
@@ -411,7 +416,7 @@ const RecognitionStoriesResources = () => (
               cta: "Read the study",
             },
             {
-              logo: "/idc.avif",
+              logo: idc,
               alt: "IDC",
               title: "A Leader in Unified Endpoint Management",
               copy:
@@ -455,7 +460,7 @@ const RecognitionStoriesResources = () => (
         <div className="mt-8 grid md:grid-cols-3 gap-6">
           {[
             {
-              logo: "/forester.avif", // replace with HPE if you have it
+              logo: forester, // replace with HPE if you have it
               alt: "HPE",
               quote:
                 "Cloud-native endpoint management with Intune was the right choice for us. The savings and comprehensive security free up IT to focus on other priorities.",
@@ -463,7 +468,7 @@ const RecognitionStoriesResources = () => (
               role: "End User Compute Manager, HPE",
             },
             {
-              logo: "/NHS-Logo.avif",
+              logo: nhs,
               alt: "NHS",
               quote:
                 "Intune consolidates our endpoint solutions, saves costs, and secures data. We recommend it to any organization enhancing its security posture.",
@@ -471,7 +476,7 @@ const RecognitionStoriesResources = () => (
               role: "Cyber Security Manager, Milton Keynes University Hospital",
             },
             {
-              logo: "/audi-logo-352315.png", // adjust filename if different
+              logo: audi, // adjust filename if different
               alt: "Audi",
               quote:
                 "Intune meets our needs for empowering employees and provides a best-in-class unified endpoint management platform.",
@@ -594,7 +599,7 @@ const ProtectEverythingCTA = () => (
       {/* Right graphic */}
       <div className="flex items-center justify-center">
         <img
-          src="/FeatureDiv.avif"   // <-- uses your public image
+          src={feature}   // <-- uses your public image
           alt="Security graphic"
           className="w-full max-w-[720px] h-auto select-none pointer-events-none"
           loading="eager"
